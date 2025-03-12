@@ -1,0 +1,46 @@
+Task: Full Stack Task Manager App with Authentication (React Native)
+Objective:
+Build a React Native app (Expo) with Node.js & MongoDB backend that allows users to sign up, log in, and manage tasks (CRUD operations).
+App Name - Timeforge
+** Important: In this Folder create only frontend code with expo. Dont create any backend code.
+** Important: make sure to write all code in typescript
+
+Technical Requirements:
+    State Management:  Redux Toolkit for state management
+    Navigation:Use Expo File based navigation
+    Storage: AsyncStorage for storing JWT tokens
+    UI: React Native Paper or NativeBase
+    env variables: use .env file to store variables - use expo env like this example:
+    const apiUrl = process.env.EXPO_PUBLIC_API_URL; and for now store dummy env variables in .env file
+
+UI/UX Specifications:
+    For common styling always use Nativewind with tailwind css
+    For icons use react-native lucide icons jsx
+    for components -Use React Native Paper or NativeBase
+    and make ui/ux design mordern and clean
+
+Features & Screens:
+Authentication:
+    Signup Screen:
+    Users can register with name, email, password.
+Login Screen:
+    Users can log in using email and password.
+    Implement token-based authentication using AsyncStorage to store JWT.
+Task Management(This should be main tabs in the bottom of the screen with 3 tabs listed bellow)
+    Home Screen:
+        Fetch and display tasks from the backend.
+        Implement pull-to-refresh.
+    Add Task Screen:
+        Allow users to create a task (title + description).
+    Task Details Screen:
+        Display task details.
+        Allow users to edit or delete tasks.
+Logout:
+Provide a logout button that clears the stored token and navigates to the Login screen.
+
+Implementation Instructions:
+    Create a new folder for the shared code
+    Create a new folder for the utils code
+    Create a new folder for the components code and separate components for each screen for example when there is common components like buttons, inputs, etc. put them in the shared folder
+    for screens use expo file based navigation
+    for state management use redux toolkit
