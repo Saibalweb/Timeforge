@@ -58,7 +58,7 @@ const SignupScreen = () => {
   };
 
   return (
-    <View className="flex-1 p-6 justify-center bg-red-400">
+    <View className="flex-1 p-6 justify-center bg-background">
       <View className="items-center mb-10">
         <Text className="text-3xl font-bold text-primary mb-2">Create Account</Text>
         <Text className="text-gray-600 text-center">Join Timeforge to manage your tasks</Text>
@@ -77,13 +77,13 @@ const SignupScreen = () => {
         {errors.name && <HelperText type="error">{errors.name}</HelperText>}
       </View>
       
-      <View className="mb-4">
+      <View className="mb-4 justify-center">
         <TextInput
           label="Email"
           value={email}
           onChangeText={setEmail}
           mode="outlined"
-          left={<TextInput.Icon icon={() => <Mail size={20} />} />}
+          left={<TextInput.Icon icon={() => <Mail size={20} color={'#03DAC6'} />} />}
           autoCapitalize="none"
           keyboardType="email-address"
           error={!!errors.email}

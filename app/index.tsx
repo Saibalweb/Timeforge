@@ -33,7 +33,7 @@ const index = () => {
     return null;
   }
 
-  return !token ? <Redirect href="/(tabs)" /> : <Redirect href="/(auth)/login" />;
+  return token ? <Redirect href="/(tabs)" /> : <Redirect href="/(auth)/login" />;
 }
 
 export default index
